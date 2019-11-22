@@ -1,0 +1,355 @@
+html, body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    display: table;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(84, 196, 230);
+}
+.container {
+    height: auto;
+}
+.logo {
+    margin: 0;
+    padding: 0;
+}
+.icon {
+    height: 20px;
+}
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+header li a {
+    display: inline-block;
+    color: #313131;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#menu li a:hover:not(.active) {
+    background-color: #4f4dbd;
+    color: #dbdbdb;
+}
+#menu {
+    background-color: aquamarine;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 37.7px;
+    color: #fff;
+}
+h5 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+#center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login {
+    width: 400px;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .8);
+    border-radius: 10px;
+}
+.inputlogin {
+    position: relative;
+}
+.inputlogin input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.inputlogin label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputlogin input:focus ~ label,
+.inputlogin input:valid ~ label {
+    top: -18px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 12px;
+}
+#center input[type="submit"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #03a9f4;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#center button[type="submit"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #03a9f4;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#clique {
+    color: #fff;
+    text-decoration: none;
+    list-style-type: none;
+}
+#clique:hover {
+    color: #03a9f4;
+    text-decoration-line : underline;
+}
+#bloc {
+    background-color: rgb(49, 123, 207);
+    padding-left: 25px;
+    padding-bottom: 25px;
+    padding-right: 25px;
+}
+#bloc img {
+    height: 320px;
+    width: 265px;
+    border-radius: 5px;
+}
+#bloc a {
+    display: inline-block;
+    color: #313131;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#espace{
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+.rightligne {
+    width: 110px;
+    height: 80px;
+    float: right;
+}
+#yellow {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgb(53, 53, 49);
+    background-color: #e0de6e;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 3px;
+}
+.ecar {
+    padding-left: 80px;
+}
+#green {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgb(71, 75, 71);
+    background-color: #5acc56;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 3px;
+}
+#red {
+    border: none;
+    outline: none;
+    color: rgb(71, 75, 71);
+    background-color: #ff5e4d;
+    padding: 10px 20px;
+    width: auto;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+#vertvif {
+    border: none;
+    outline: none;
+    color: rgb(71, 75, 71);
+    background-color: #34c924;
+    padding: 10px 20px;
+    width: auto;
+    cursor: pointer;
+    border-radius: 3px;
+}
+#login2 {
+    width: 1200px;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .8);
+    border-radius: 10px;
+}
+.bloc2 {
+    width: 900px;
+    margin-bottom: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #3781e2;
+    text-transform: uppercase;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+.centrer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#center2{
+    display: flex;
+    align-items: center;
+}
+#produit {
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: rgba(72, 100, 177, 0.904);
+    height: 600px;
+}
+#produit img {
+    height: 600px;
+    width: 550px;
+    border-radius: 5px;
+}
+#gauche {
+    font-size: 16px;
+}
+#gauche p {
+    font-weight: bold;
+}
+#droite {
+    padding-top: 200px;
+    font-size: 15px;
+}
+.container #gauche {
+    background-color: rgba(72, 100, 177, 0.904);;
+}
+.milieu {
+    text-align: center;
+}
+#col_produit, #col_prix, #col_quantity {
+    border-left: solid;
+    border-top: solid;
+    border-bottom: solid;
+}
+#col_produit h3, #col_prix h3, #col_quantity h3 {
+    text-align: center;
+}
+#col_quantity {
+    border-right: solid;
+}
+#col_produit p{
+    text-align: left;
+}
+#col_quantity p, #col_prix p{
+    text-align: center;
+}
+hr {
+    border: 2px solid black;
+    margin-bottom: 25px;
+}
+button:hover, input:hover[type='submit'] {
+    opacity: 0.8;
+}
+.tailvalid {
+    background: transparent;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    color: rgb(71, 75, 71);
+    background-color: #3781e2;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: auto;
+    border-radius: 3px;
+}
+.lala {
+    position: relative;
+}
+.lala input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.lala label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: -30px 0;
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.lala input:focus ~ label,
+.lala input:valid ~ label {
+    top: 10px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 12px;
+}
+.lalaespace {
+    height: 50px;
+}
+#textewhite {
+    color: #ffffff;
+}
+#textered {
+    color: red;
+}
+#textcenter {
+    text-align: center;
+}
+footer {
+    display: table-row;
+    height: 1px;
+    background-color: #42545a;
+}
+footer .icons {
+    height: 50px;
+}

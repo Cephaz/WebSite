@@ -23,6 +23,7 @@ class CreateInvoiceTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->integer('product_id');
             $table->string('title', 45);
             $table->integer('price');
             $table->timestamps();

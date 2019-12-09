@@ -7,20 +7,21 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ __('IGVAULT') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/main.js') }}" defer></script>
+    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
 </head>
-<body>
+<body onload="nbrproduit()">
     <header>
         <div class="container">
             <ul>
@@ -46,9 +47,9 @@
                         <a href="{{ route('admin') }}">{{ __('Admin') }}<div><img class="icon" src="{{ asset('img/formulaire.png') }}"></div></a>
                     @endif
                     <a  href="{{url('panier')}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        <?php $admin=\DB::table('Basket')->join('users', 'Basket.users_id', '=', 'users.id')->where('Basket.users_id', Auth::user()->id)->get();
-                        $nombre = count($admin);
-                        ?>{{ $nombre }}<div><img class="icon" src="{{ asset('img/panier.png') }}"></div>
+                        <!-- ICI NOMBRE DE PRODUIT-->
+                            <div class="right" id="123456" style="width: 4px; height: 4px;"></div>
+                            <div><img class="icon" src="{{ asset('img/panier.png') }}"></div>
                     </a>
                     <a href="{{url('profile')}}/{{$pass}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }} <div><img class="icon" src="{{ asset('img/account.png') }}"></div>
@@ -76,7 +77,6 @@
                 <li class="left"><a href="{{url('home')}}">CATALOGUE</a></li>
                 <li class="left"><a href="{{url('profile')}}/{{$pass}}">PROFILE</a></li>
                 <li class="left"><a href="{{url('panier')}}">PANIER</a></li>
-                </li>
             </ul>
         </div>
     </header>

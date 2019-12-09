@@ -10,15 +10,15 @@
             @csrf
 
             <div class="inputlogin">
-                <input id="title" type="texte" name="title" value="{{ old('title') }}" required autocomplete="title" maxlength="45" autofocus>
+                <input id="title" type="texte" name="title" value="{{ old('title') }}" required autocomplete="title" maxlength="30" autofocus>
                 <label for="title">{{ __('Titre') }}</label>
             </div>
             <div class="inputlogin">
-                <input id="description" type="texte" name="description" value="{{ old('description') }}" required autocomplete="description" autofocus>
+                <input id="description" type="texte" name="description" value="{{ old('description') }}" required autocomplete="description" maxlength="255" autofocus>
                 <label for="description">{{ __('Description') }}</label>
             </div>
             <div class="inputlogin">
-                <input id="category" type="texte" name="category" value="{{ old('category') }}" required autocomplete="category" autofocus>
+                <input id="category" type="texte" name="category" value="{{ old('category') }}" required autocomplete="category" maxlength="30" autofocus>
                 <label for="category">{{ __('Categorie') }}</label>
             </div>
             <div class="inputlogin">
@@ -77,5 +77,56 @@
         </div>
     </div>
 @endif
+    <div id="espace"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <div id="nbrutilisateur">
+        <h3 id="useractifs"></h3>
+        <h3 id="totocommand"></h3>
+        <h3 id="plusgros"></h3>
+    </div>
+    <button type="button" id="refresh" onclick="infouser()">Refresh</button>
+
+    <script type="text/javascript">
+        function infouser() {
+            $.ajax({
+                url: 'php/change.php',
+                type: 'GET',
+
+                success: function (data) {
+                    let h3 = document.getElementById("useractifs");
+
+                    h3.innerText = "il y a "+data+" utilisateurs actifs";
+                },
+            });
+            infocommande();
+            function infocommande() {
+                $.ajax({
+                    url: 'php/change2.php',
+                    type: 'GET',
+
+                    success: function (data) {
+                        let h4 = document.getElementById("totocommand");
+
+                        h4.innerText = "il y a "+data+" commandes passées";
+                    },
+                });
+                infoplusgros();
+                function infoplusgros() {
+                    $.ajax({
+                        url: 'php/change3.php',
+                        type: 'GET',
+
+                        success: function (data) {
+                            let h5 = document.getElementById("plusgros");
+
+                            h5.innerText = "la plus grand commande est de "+data+" euros ";
+                        },
+                    });
+                }
+            }
+        }
+    </script>
+
     <div id="espace"></div>
 @endsection

@@ -24,10 +24,10 @@ class CreateProductTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('image', 45)->nullable();
-            $table->string('title', 45)->nullable();
-            $table->string('description', 45)->nullable();
+            $table->string('title', 30)->nullable();
+            $table->string('description', 255)->nullable();
             $table->integer('price')->nullable();
-            $table->string('category', 45)->nullable();
+            $table->string('category', 30)->nullable();
             $table->integer('quantity')->nullable();
             $table->timestamps();
             $table->integer('users_id')->unsigned();
